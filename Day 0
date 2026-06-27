@@ -1,0 +1,54 @@
+# Day 0 — Building my Ausbildung Portfolio on GitHub
+*Date: 27-06-2026* | *Category: #meta #github #portfolio*
+
+---
+
+## Context — Kontext
+
+**🇬🇧** Before my Ausbildung as a **Fachinformatiker für Daten- und Prozessanalyse** officially begins, I spent today setting up my public learning infrastructure on GitHub. The goal: have a professional, documented presence from day one — not just a collection of files, but a structured system that grows with me.
+
+**🇩🇪** Noch bevor meine Ausbildung zum **Fachinformatiker für Daten- und Prozessanalyse** offiziell beginnt, habe ich heute meine öffentliche Lerninfrastruktur auf GitHub aufgebaut. Ziel: eine professionelle, dokumentierte Präsenz vom ersten Tag an — keine lose Sammlung von Dateien, sondern ein strukturiertes System, das mit mir wächst.
+
+---
+
+## What I built today — Was ich heute gebaut habe
+
+**🇬🇧 Two repositories:**
+
+| Repository | Purpose |
+|---|---|
+| [`deimoskaos/deimoskaos`](https://github.com/deimoskaos/deimoskaos) | Public profile homepage — who I am and where I'm heading |
+| [`deimoskaos/Today_I_Learned`](https://github.com/deimoskaos/Today_I_Learned) | This journal — daily learning notes organized by topic |
+
+**Design decisions made:**
+- Bilingual profile (🇩🇪 German + 🇬🇧 English) to target the German job market
+- TIL folders will grow organically as subjects are covered — no empty placeholders
+- Journey timeline reflects the real 2-year structure of an *außerbetriebliche* Ausbildung
+
+---
+
+**🇩🇪 Zwei Repositories:**
+
+| Repository | Zweck |
+|---|---|
+| [`deimoskaos/deimoskaos`](https://github.com/deimoskaos/deimoskaos) | Öffentliche Profil-Homepage — wer ich bin und wohin ich mich entwickle |
+| [`deimoskaos/Today_I_Learned`](https://github.com/deimoskaos/Today_I_Learned) | Dieses Tagebuch — tägliche Lernnotizen, nach Themen geordnet |
+
+**Getroffene Designentscheidungen:**
+- Zweisprachiges Profil (🇩🇪 Deutsch + 🇬🇧 Englisch) für den deutschen Arbeitsmarkt
+- TIL-Ordner wachsen organisch, wenn Themen behandelt werden — keine leeren Platzhalter
+- Die Journey-Timeline spiegelt die echte 2-jährige Struktur einer *außerbetrieblichen* Ausbildung wider
+
+---
+
+## Key Takeaway — Was ich gelernt habe
+
+**🇬🇧**
+- **A portfolio built before you start is a signal.** It tells future employers you think ahead and take ownership of your learning.
+- **GitHub is not just for code.** A well-structured README and a consistent commit history communicate professionalism even without a single line of Python or SQL.
+- **Start honest, grow real.** Empty folders and fake projects are worse than a clean, minimal repository. Every entry here will be earned.
+
+**🇩🇪**
+- **Ein Portfolio, das vor dem Start aufgebaut wird, ist ein Signal.** Es zeigt zukünftigen Arbeitgebern, dass man vorausdenkt und Verantwortung für das eigene Lernen übernimmt.
+- **GitHub ist nicht nur für Code.** Ein gut strukturiertes README und eine regelmäßige Commit-Historie vermitteln Professionalität — auch ohne eine einzige Zeile Python oder SQL.
+- **Ehrlich anfangen, echt wachsen.** Leere Ordner und gefälschte Projekte sind schlimmer als ein sauberes, minimales Repository. Jeder Eintrag hier wird verdient sein.
