@@ -1,64 +1,94 @@
 ---
-date: 2026-08-21
+date: 2026-08-26
 category: Software Development
-tags: [uml, use-case, activity-diagram, requirements-engineering, user-story, software-lifecycle, LF5]
+tags: [multimedia-data, raster-vector, color-models, image-formats, audio-sampling, algorithms, programming-foundations, LF5]
 source: school
 lernfeld: LF5
 ---
 
-# UML Modeling Pipeline: Requirements to User Stories, Use Cases & Activity Diagrams (Connect Four Case Study)
-*Date: 21-08-2026* | *Category: #software-development #uml #requirements-engineering*
+# Multimedia Data Representation (Images & Audio), File Size Calculations & Algorithms vs. Programs
+*Date: 26-08-2026* | *Category: #software-development #multimedia #computer-science*
 
 ---
 
 ## Context — Kontext
 
-**🇬🇧** On Friday at school, we walked through the complete analysis and design phase of the software development lifecycle. Using the game **"Connect Four" (*Vier Gewinnt*)** as a practical example, we practiced the structured transformation pipeline: **Requirements $\rightarrow$ User Stories $\rightarrow$ Use Case Diagrams $\rightarrow$ Activity Diagrams**.
+**🇬🇧** Today at school, we explored how multimedia data is represented digitally: the mechanics of raster vs. vector graphics, color spaces (RGB/CMYK/Hex), audio sampling fundamentals, file size mathematical formulas, and the formal definitions distinguishing an **Algorithm** from a **Program**.
 
-**🇩🇪** Am Freitag haben wir in der Schule die vollständige Analyse- und Entwurfsphase des Softwareentwicklungszyklus durchlaufen. Am Praxisbeispiel **„Vier Gewinnt"** haben wir die strukturierte Transformationspipeline geübt: **Anforderungen $\rightarrow$ User Story $\rightarrow$ Anwendungsfalldiagramm $\rightarrow$ Aktivitätsdiagramm**.
+**🇩🇪** Heute haben wir die digitale Darstellung von Multimediadaten behandelt: Raster- vs. Vektorgrafiken, Farbräume (RGB/CMYK/Hex), Audio-Sampling-Grundlagen, Berechnungsformeln für Dateigrößen sowie die formale Unterscheidung zwischen einem **Algorithmus** und einem **Programm**.
 
 ---
 
 ## Key Topics — Hauptthemen
 
-### 1. The Analysis & Design Pipeline — Die Transformationspipeline
+### 1. Graphical Data Representation — Darstellung von Bilddaten
 
-**🇬🇧** Software engineering transforms vague user needs into precise technical specifications through step-by-step refinement:
-**🇩🇪** Software-Engineering überführt vage Nutzerbedürfnisse durch schrittweise Verfeinerung in präzise technische Spezifikationen:
+#### Raster vs. Vector Graphics / Raster- vs. Vektorgrafiken
+- **Raster / Bitmap:** Matrix of individual pixels. Resolution-dependent; zooming causes pixelation (e.g., photos).
+- **Vector / Vektorgrafik:** Defined mathematically via coordinates, paths, lines, and curves. Resolution-independent; scalable infinitely without quality loss (e.g., logos, diagrams).
 
-$$\text{Anforderungen (Requirements)} \longrightarrow \text{User Story} \longrightarrow \text{Use Case Diagram} \longrightarrow \text{Aktivitätsdiagramm}$$
+#### Color Models & Hexadecimal Representation / Farbräume
+- **RGB (Red, Green, Blue):** Additive color model for screens (0–255 per channel).
+  - Hex notation: `#RRGGBB` (e.g., `#FFFFFF` = White, `#FF0000` = Pure Red).
+- **CMYK (Cyan, Magenta, Yellow, Key/Black):** Subtractive color model for print media.
 
-| Step / Schritt | Level / Ebene | Purpose / Zweck | Connect Four Example / Beispiel Vier Gewinnt |
-|---|---|---|---|
-| **1. Anforderung (Requirement)** | Business / Fachlich | Raw requirement / Rohe Anforderung | "Players must be able to drop chips into columns." / Spieler müssen Chips in Spalten einwerfen können. |
-| **2. User Story** | User-centric / Nutzerzentriert | Agiles Format: *As a... I want to... so that...* | *"As a player, I want to choose a column so that my chip drops to the lowest free slot."* |
-| **3. Use Case Diagram** | Structural / Strukturell | Maps actors to system functions | Actor: `Player` $\rightarrow$ Use Case: `Drop Chip`, `Check Win Condition` |
-| **4. Aktivitätsdiagramm** | Procedural / Ablauflogik | Flowchart showing decisions, loops, and states | Step-by-step logic: Select column $\rightarrow$ Column full? $\rightarrow$ Drop $\rightarrow$ Check 4 in a row $\rightarrow$ Switch turn. |
+#### Image File Size Calculation (Uncompressed) / Berechnung der Dateigröße
+
+$$\text{File Size (Bytes)} = \frac{\text{Width (px)} \times \text{Height (px)} \times \text{Color Depth (Bits)}}{8}$$
+
+*Note:* Real file size is typically much smaller due to compression algorithms (lossless vs. lossy).
+
+#### Image Formats Overview / Bildformate im Vergleich
+
+| Format | Type / Typ | Compression / Kompression | Transparency / Transparenz | Primary Use / Hauptanwendung |
+|---|---|---|---|---|
+| **JPEG / JPG** | Raster | Lossy / Verlustbehaftet | ❌ No | Photography, web images / Webfotos |
+| **PNG** | Raster | Lossless / Verlustfrei | ✅ Yes (Alpha) | Web graphics, logos, screenshots / Grafiken mit Transparenz |
+| **GIF** | Raster | Lossless (256 colors) | ✅ Yes (1-bit) | Simple animations / Einfache Animationen |
+| **SVG** | Vector | Lossless (XML text) | ✅ Yes | Scalable web graphics, UI icons / Skalierbare Webicons |
+| **TIFF** | Raster | Lossless / Uncompressed | ✅ Yes | High-quality print & archiving / Druckvorstufe & Archivierung |
+| **PSD / AI** | Raster/Vector | Proprietary / Layers | ✅ Yes | Editable source files (Photoshop/Illustrator) |
+| **PDF / EPS** | Hybrid | Vector + Embedded Raster | ✅ Yes | Print distribution & vector exchange / Druckdaten |
 
 ---
 
-### 2. UML Activity Diagram Elements — Elemente des Aktivitätsdiagramms
+### 2. Audio Data Representation — Darstellung von Audiodaten
 
-**🇬🇧** While Use Case diagrams show *what* the system does, Activity diagrams specify *how* the process flows step-by-step:
-**🇩🇪** Während Anwendungsfalldiagramme zeigen, *was* das System tut, modellieren Aktivitätsdiagramme den genauen *Ablauf* Schritt für Schritt:
+**🇬🇧** Analog sound waves are digitized through **Sampling** (measuring voltage at discrete time intervals) and **Quantization** (assigning discrete bit values).
+**🇩🇪** Analoge Schallwellen werden durch **Sampling / Abtastung** (zeitdiskrete Messung) und **Quantisierung** (wertdiskrete Zuweisung) digitalisiert.
 
-| Symbol / Element | Meaning / Bedeutung |
-|---|---|
-| **Initial Node / Startknoten (●)** | Starting point of the activity flow / Startpunkt des Ablaufes |
-| **Action / Aktion (Rounded Box)** | A single processing step (e.g. "Validate column") / Ein einzelner Arbeitsschritt |
-| **Decision / Verzweigung (◇ Diamond)** | Branching based on a condition (guard: `[valid]` vs. `[column full]`) / Bedingte Verzweigung |
-| **Merge / Zusammenführung (◇ Diamond)** | Merges multiple alternative paths back into one / Führt alternative Pfade zusammen |
-| **Fork / Join (Thick Bar / Balken)** | Concurrent parallel processing / Parallele Ausführung von Pfaden |
-| **Final Node / Endknoten (◉)** | Termination of the entire process / Ende des Ablaufs |
+**Key Metrics / Kenngrößen:**
+- **Sampling Rate (Abtastrate):** Samples per second in Hz (e.g. CD quality = $44.1\text{ kHz}$).
+- **Bit Depth (Bittiefe):** Resolution per sample (e.g. 16-bit = 65,536 dynamic amplitude levels).
+- **Channels (Kanäle):** Mono (1) vs. Stereo (2).
+
+**Uncompressed Audio File Size Calculation / Audio-Dateigrößenberechnung:**
+
+$$\text{Size (Bytes)} = \frac{\text{Sampling Rate (Hz)} \times \text{Bit Depth (Bits)} \times \text{Channels} \times \text{Duration (Seconds)}}{8}$$
+
+---
+
+### 3. Algorithms vs. Programs — Algorithmen und Programme
+
+**🇬🇧** A foundational distinction in computer science:
+**🇩🇪** Eine grundlegende Unterscheidung in der Informatik:
+
+| Concept / Konzept | Definition | Characteristics / Eigenschaften |
+|---|---|---|
+| **Algorithmus (Algorithm)** | A precise, step-by-step procedure to solve a problem / Eine eindeutige Handlungsanweisung zur Problemlösung | Abstract, language-independent. Properties: **Determiniertheit** (predictable), **Finitheit** (finite steps), **Terminierung** (ends), **Ausführbarkeit** (executable). |
+| **Programm (Program)** | Concrete implementation of an algorithm in a specific programming language / Die konkrete Implementierung eines Algorithmus in einer Programmiersprache | Concrete, language-dependent, compiled/interpreted for machine execution. |
+
+> 💡 **🇬🇧** Core takeaway: An algorithm is the logical recipe; a program is the baked dish in a specific kitchen.
+> 💡 **🇩🇪** Kernaussage: Ein Algorithmus ist das logische Rezept; ein Programm ist das fertige Gericht in einer konkreten Programmiersprache.
 
 ---
 
 ## Key Takeaway — Was ich gelernt habe
 
 **🇬🇧**
-- **From abstract to executable:** Moving from a User Story to an Activity Diagram forces you to think about edge cases (e.g., what happens when the chosen column is already full?) before writing code.
-- **Activity diagrams are visual pseudocode:** They serve as the direct blueprint for programming control structures (`if/else`, `while/for` loops).
+- **Formulas bridge theory and system design:** Calculating theoretical raw data sizes reveals why compression formats (JPEG, MP3, PNG) are mandatory for real-world network transmission and storage.
+- **Algorithms outlive technologies:** Programming languages change, but algorithmic problem-solving principles remain universally applicable.
 
 **🇩🇪**
-- **Vom Abstrakten zum Ausführbaren:** Der Übergang von der User Story zum Aktivitätsdiagramm zwingt dazu, Randfälle (z. B. was passiert, wenn die Spalte voll ist?) vor dem Programmieren zu durchdenken.
-- **Aktivitätsdiagramme sind visueller Pseudocode:** Sie dienen als direkte Blaupause für die Implementierung von Kontrollstrukturen (`if/else`, Schleifen).
+- **Formeln verbinden Theorie und Systemdesign:** Die Berechnung theoretischer Rohdaten zeigt, warum Kompressionsformate (JPEG, MP3, PNG) für reale Netzwerke und Speicher unersetzlich sind.
+- **Algorithmen überdauern Technologien:** Programmiersprachen ändern sich, aber algorithmische Problemlösungsmuster bleiben universell gültig.
