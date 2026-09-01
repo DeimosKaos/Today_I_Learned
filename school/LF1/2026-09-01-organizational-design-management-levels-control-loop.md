@@ -26,7 +26,7 @@ lernfeld: LF1
 **🇬🇧** Organizational design follows a two-pillar methodology: first establishing *what* needs to be done and *who* does it (static structure), then defining *how*, *when*, and *where* it happens (dynamic workflow):
 **🇩🇪** Die Organisationsgestaltung basiert auf zwei Säulen: Zuerst wird festgelegt, *was* getan werden muss und *wer* zuständig ist (statisch), danach *wie*, *wann* und *wo* die Ausführung erfolgt (dynamisch):
 
-```
+```mermaid
 Gesamtaufgabe (Overall Goal)
     ├── [ Aufgabenanalyse ] ──► Elementaraufgaben ──► [ Aufgabensynthese ] ──► Stellen & Abteilungen (Aufbauorganisation)
     └── [ Ablaufanalyse   ] ──► Arbeitsgänge      ──► [ Ablaufsynthese   ] ──► Prozesse & Workflows  (Ablauforganisation)
