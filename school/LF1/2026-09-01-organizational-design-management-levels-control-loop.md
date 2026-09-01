@@ -27,9 +27,23 @@ lernfeld: LF1
 **🇩🇪** Die Organisationsgestaltung basiert auf zwei Säulen: Zuerst wird festgelegt, *was* getan werden muss und *wer* zuständig ist (statisch), danach *wie*, *wann* und *wo* die Ausführung erfolgt (dynamisch):
 
 ```mermaid
-Gesamtaufgabe (Overall Goal)
-    ├── [ Aufgabenanalyse ] ──► Elementaraufgaben ──► [ Aufgabensynthese ] ──► Stellen & Abteilungen (Aufbauorganisation)
-    └── [ Ablaufanalyse   ] ──► Arbeitsgänge      ──► [ Ablaufsynthese   ] ──► Prozesse & Workflows  (Ablauforganisation)
+graph TD
+    Goal["Gesamtaufgabe (Overall Goal)"]
+    
+    subgraph Aufbau["Aufbauorganisation (Structural)"]
+        A1["1. Aufgabenanalyse\n(Task Deconstruction)"] --> A2["Elementaraufgaben\n(Sub-tasks)"]
+        A2 --> A3["2. Aufgabensynthese\n(Task Synthesis)"]
+        A3 --> A4["Stellen & Abteilungen\n(Organigramm)"]
+    end
+
+    subgraph Ablauf["Ablauforganisation (Process)"]
+        B1["1. Ablaufanalyse\n(Workstep Analysis)"] --> B2["Arbeitsgänge\n(Worksteps)"]
+        B2 --> B3["2. Ablaufsynthese\n(Process Synthesis)"]
+        B3 --> B4["Prozesse & Workflows\n(Prozesskette / BPMN)"]
+    end
+
+    Goal --> A1
+    Goal --> B1
 ```
 
 | Phase / Dimension | Analyse (Deconstruction / Zerlegung) | Synthese (Integration / Bündelung) | Result / Ergebnis |
